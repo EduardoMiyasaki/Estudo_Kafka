@@ -1,0 +1,40 @@
+Estudo Kafka
+
+Kafka = Ferramenta que permite desacoplar sistemas
+
+Plataforma que auxilia o tratamento de dados e mensagens
+
+Kafka é bom, pois sua escabilidade é vertical(deixar a máquina maior)
+
+Broker = São os servidores que armazenam dados e gerenciam todas as solicitações de streaming de dados
+(Responsável por receber as mensagens dos producers, escrever as mensagens no disco e disponibilizar para os consumers)
+
+Cluster = Grupo de Brokers
+
+Zookeeper = Api externa que é um gerenciador de brokers, verifica se os brokers estão ativos, se tiver caído ele provisiona outro
+
+Streaming = fluxo contínuo de dados, sempre vai ter dados enviados e consumidos
+
+dados em batch(lotes)
+
+
+Uso comuns do Kafka
+
+Analise de Logs
+
+ex: carrinho, pagamento
+
+
+
+Produtores = vai publicar a mensagem em um tópico
+
+Consumidor = vai consumir as mensagens de um tópico
+
+
+Chaves são utilizadas para definir através de hash para qual partição sua mensagem será enviada.
+
+caso nenhuma chave for informada, os dados serão distribuídos de aleatoriamente em diferentes partições
+
+sem chave, não é possível garantir a ordem das mensagens em sua entregs
+
+todo tópico pode ter 0 ou n partições
